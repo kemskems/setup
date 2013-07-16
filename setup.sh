@@ -9,7 +9,6 @@ sudo apt-get update
 # Install packages from official repository
 sudo apt-get install vim
 sudo apt-get install php5
-sudo apt-get install phpmyadmin
 sudo apt-get install openjdk-7-jdk
 sudo apt-get install gcc
 sudo apt-get install vlc
@@ -35,6 +34,9 @@ sudo apt-get install sublime-text
 sudo apt-get install mariadb-server
 sudo apt-get install nodejs npm
 sudo apt-get install spotify-client
+
+# Install phpmyadmin only after MySQL has been installed
+sudo apt-get install phpmyadmin
 
 # Install pacapt (https://github.com/icy/pacapt)
 sudo wget -O /usr/local/bin/pacman https://github.com/icy/pacapt/raw/master/pacman
