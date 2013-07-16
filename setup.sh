@@ -7,7 +7,13 @@
 sudo apt-get update
 
 # Install packages from official repository
-sudo apt-get install vim php phpmyadmin openjdk-7-jdk gcc vlc byobu
+sudo apt-get install vim
+sudo apt-get install php5
+sudo apt-get install phpmyadmin
+sudo apt-get install openjdk-7-jdk
+sudo apt-get install gcc
+sudo apt-get install vlc
+sudo apt-get install byobu
 
 # Add third-party repositories (PPA)
 # Sublime Text 2
@@ -25,16 +31,12 @@ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 94558F59
 
 # Update and install
 sudo apt-get update
-sudo apt-get install sublime-text mariadb-server nodejs npm spotify-client
+sudo apt-get install sublime-text
+sudo apt-get install mariadb-server
+sudo apt-get install nodejs npm
+sudo apt-get install spotify-client
 
 # Install pacapt (https://github.com/icy/pacapt)
 sudo wget -O /usr/local/bin/pacman https://github.com/icy/pacapt/raw/master/pacman
 sudo chmod 755 /usr/local/bin/pacman
 
-# Use dotfiles config from https://github.com/kemskems/dotfiles
-cd $HOME
-mkdir -p Projects/
-cd Projects/
-git clone https://github.com/kemskems/dotfiles.git
-cd dotfiles/
-./install.sh
