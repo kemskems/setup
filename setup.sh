@@ -7,7 +7,7 @@
 sudo apt-get update
 
 # Install packages from official repository
-sudo apt-get install git vim php phpmyadmin openjdk-7-jdk gcc vlc byobu
+sudo apt-get install vim php phpmyadmin openjdk-7-jdk gcc vlc byobu
 
 # Add third-party repositories (PPA)
 # Sublime Text 2
