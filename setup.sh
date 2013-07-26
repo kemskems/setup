@@ -10,7 +10,7 @@ INSTALL=(
     "PHP 5"
     "MariaDB"
     "NodeJS"
-    "Pacapt"
+    "pacapt"
     "VLC media player"
     "Spotify"
 )
