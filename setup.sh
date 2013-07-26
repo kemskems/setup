@@ -1,6 +1,7 @@
 #!/bin/bash
 
 INSTALL=(
+    "Git"
     "Vim"
     "Byobu"
     "Sublime Text 2"
@@ -16,50 +17,56 @@ INSTALL=(
 SIZE=${#INSTALL[*]}
 
 install() {
+    # Update repo information
+    sudo apt-get update
+
     while [ "$#" -gt 0 ]; do
         case "$1" in
+            # Git
+            0)  sudo apt-get -y install git
+                ;;
             # Vim
-            0)  sudo apt-get -y install vim
+            1)  sudo apt-get -y install vim
                 ;;
             # Byobu
-            1)  sudo apt-get -y install byobu
+            2)  sudo apt-get -y install byobu
                 ;;
             # Sublime Text 2
-            2)  sudo add-apt-repository ppa:webupd8team/sublime-text-2
+            3)  sudo add-apt-repository ppa:webupd8team/sublime-text-2
                 sudo apt-get update
                 sudo apt-get install -y sublime-text
                 ;;
             # GCC
-            3)  sudo apt-get -y install gcc
+            4)  sudo apt-get -y install gcc
                 ;;
             # OpenJDK 7
-            4)  sudo apt-get -y install openjdk-7-jdk
+            5)  sudo apt-get -y install openjdk-7-jdk
                 ;;
             # PHP 5
-            5)  sudo apt-get -y install php5
+            6)  sudo apt-get -y install php5
                 ;;
             # MariaDB
-            6)  sudo apt-get -y install software-properties-common
+            7)  sudo apt-get -y install software-properties-common
                 sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 0xcbcb082a1bb943db
                 sudo add-apt-repository 'deb http://mariadb.biz.net.id//repo/10.0/ubuntu raring main'
                 sudo apt-get update
                 sudo apt-get install -y mariadb-server
                 ;;
             # NodeJS
-            7)  sudo apt-get -y install python-software-properties python g++ make
+            8)  sudo apt-get -y install python-software-properties python g++ make
                 sudo add-apt-repository ppa:chris-lea/node.js
                 sudo apt-get update
                 sudo apt-get -y install nodejs npm
                 ;;
             # Pacapt
-            8)  sudo wget -O /usr/local/bin/pacman https://github.com/icy/pacapt/raw/master/pacman
+            9)  sudo wget -O /usr/local/bin/pacman https://github.com/icy/pacapt/raw/master/pacman
                 sudo chmod 755 /usr/local/bin/pacman
                 ;;
             # VLC media player
-            9)  sudo apt-get -y install vlc
+            10) sudo apt-get -y install vlc
                 ;;
             # Spotify
-            10) sudo add-apt-repository 'deb http://repository.spotify.com stable non-free'
+            11) sudo add-apt-repository 'deb http://repository.spotify.com stable non-free'
                 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 94558F59
                 sudo apt-get update
                 sudo apt-get -y install spotify-client
