@@ -81,7 +81,7 @@ read SELECTIONS
 if [ -z "$SELECTIONS" ]; then
     install $(seq -s ' ' $SIZE)
 else
-    install "$SELECTIONS"
+    install $SELECTIONS
 fi
 
 # # This script assumes you're running Ubuntu 13.04
