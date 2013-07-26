@@ -56,7 +56,7 @@ install() {
             8)  sudo apt-get -y install python-software-properties python g++ make
                 sudo add-apt-repository ppa:chris-lea/node.js
                 sudo apt-get update
-                sudo apt-get -y install nodejs npm
+                sudo apt-get -y install nodejs
                 ;;
             # Pacapt
             9)  sudo wget -O /usr/local/bin/pacman https://github.com/icy/pacapt/raw/master/pacman
