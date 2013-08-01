@@ -13,6 +13,9 @@ INSTALL=(
     "pacapt"
     "VLC media player"
     "Spotify"
+    "GNOME session fallback"
+    "Compiz Config Settings Manager"
+    "Synapse"
 )
 SIZE=${#INSTALL[*]}
 
@@ -70,6 +73,16 @@ install() {
                 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 94558F59
                 sudo apt-get update
                 sudo apt-get -y install spotify-client
+                ;;
+            # Gnome session fallback
+            12) sudo apt-get -y install gnome-session-fallback
+                ;;
+            # Compiz
+            13) sudo apt-get -y install compizconfig-settings-manager
+                sudo apt-get -y install compiz-plugins-extra
+                ;;
+            # Synapse
+            14) sudo apt-get -y install synapse
                 ;;
             # Default
             *)  echo "Unrecognized selection number '$1'. Skipping."
