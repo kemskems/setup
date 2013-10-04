@@ -15,6 +15,10 @@ My Ubuntu environment setup script. This script will install:
 10. [pacapt](https://github.com/icy/pacapt)
 11. VLC media player
 12. [Spotify](https://www.spotify.com/)
+13. GNOME session fallback
+14. Compiz config settings manager
+15. Microsoft Truetype Fonts
+16. [Google Chrome](https://www.google.com/intl/en/chrome/browser/)
 
 Getting Started
 ---------------
