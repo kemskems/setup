@@ -16,6 +16,8 @@ INSTALL=(
     "GNOME session fallback"
     "Compiz Config Settings Manager"
     "Synapse"
+    "MS Fonts"
+    "Google Chrome"
 )
 SIZE=${#INSTALL[*]}
 
@@ -83,6 +85,15 @@ install() {
                 ;;
             # Synapse
             14) sudo apt-get -y install synapse
+                ;;
+            # MS Fonts
+            15) sudo apt-get -y install ttf-mscorefonts-installer
+                ;;
+            # Google Chrome
+            16) wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+                sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
+                sudo apt-get update
+                sudo apt-get -y install google-chrome-stable
                 ;;
             # Default
             *)  echo "Unrecognized selection number '$1'. Skipping."
