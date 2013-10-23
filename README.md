@@ -7,8 +7,8 @@ My Ubuntu environment setup script. This script will install:
 2. [Vim](http://www.vim.org/)
 3. [Byobu](http://byobu.co/)
 4. [Sublime Text 2](http://www.sublimetext.com/)
-5. GCC
-6. OpenJDK 7
+5. gcc
+6. Oracle Java 7
 7. PHP 5
 8. [MariaDB](https://mariadb.org/)
 9. [NodeJS](http://nodejs.org/)
@@ -19,6 +19,7 @@ My Ubuntu environment setup script. This script will install:
 14. Compiz config settings manager
 15. Microsoft Truetype Fonts
 16. [Google Chrome](https://www.google.com/intl/en/chrome/browser/)
+17. g++
 
 Getting Started
 ---------------

@@ -5,8 +5,8 @@ INSTALL=(
     "Vim"
     "Byobu"
     "Sublime Text 2"
-    "GCC"
-    "OpenJDK 7"
+    "gcc"
+    "Oracle Java 7"
     "PHP 5"
     "MariaDB"
     "NodeJS"
@@ -18,6 +18,7 @@ INSTALL=(
     "Synapse"
     "MS Fonts"
     "Google Chrome"
+    "g++"
 )
 SIZE=${#INSTALL[*]}
 
@@ -41,11 +42,13 @@ install() {
                 sudo apt-get update
                 sudo apt-get install -y sublime-text
                 ;;
-            # GCC
+            # gcc
             4)  sudo apt-get -y install gcc
                 ;;
-            # OpenJDK 7
-            5)  sudo apt-get -y install openjdk-7-jdk
+            # Oracle Java 7
+            5)  sudo add-apt-repository ppa:webupd8team/java
+                sudo apt-get update
+                sudo apt-get -y install oracle-java7-installer
                 ;;
             # PHP 5
             6)  sudo apt-get -y install php5
@@ -94,6 +97,9 @@ install() {
                 sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
                 sudo apt-get update
                 sudo apt-get -y install google-chrome-stable
+                ;;
+            # g++
+            17) sudo apt-get -y install g++
                 ;;
             # Default
             *)  echo "Unrecognized selection number '$1'. Skipping."
