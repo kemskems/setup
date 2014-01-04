@@ -67,8 +67,8 @@ install() {
                 sudo apt-get -y install nodejs
                 ;;
             # Pacapt
-            9)  sudo wget -O /usr/local/bin/pacman https://github.com/icy/pacapt/raw/master/pacman
-                sudo chmod 755 /usr/local/bin/pacman
+            9)  sudo wget -O /usr/local/bin/pacapt https://github.com/icy/pacapt/raw/master/pacapt
+                sudo chmod 755 /usr/local/bin/pacapt
                 ;;
             # VLC media player
             10) sudo apt-get -y install vlc
