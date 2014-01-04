@@ -12,7 +12,6 @@ INSTALL=(
     "NodeJS"
     "pacapt"
     "VLC media player"
-    "Spotify"
     "GNOME session fallback"
     "Compiz Config Settings Manager"
     "Synapse"
@@ -73,33 +72,27 @@ install() {
             # VLC media player
             10) sudo apt-get -y install vlc
                 ;;
-            # Spotify
-            11) sudo add-apt-repository 'deb http://repository.spotify.com stable non-free'
-                sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 94558F59
-                sudo apt-get update
-                sudo apt-get -y install spotify-client
-                ;;
             # Gnome session fallback
-            12) sudo apt-get -y install gnome-session-fallback
+            11) sudo apt-get -y install gnome-session-fallback
                 ;;
             # Compiz
-            13) sudo apt-get -y install compizconfig-settings-manager
+            12) sudo apt-get -y install compizconfig-settings-manager
                 sudo apt-get -y install compiz-plugins-extra
                 ;;
             # Synapse
-            14) sudo apt-get -y install synapse
+            13) sudo apt-get -y install synapse
                 ;;
             # MS Fonts
-            15) sudo apt-get -y install ttf-mscorefonts-installer
+            14) sudo apt-get -y install ttf-mscorefonts-installer
                 ;;
             # Google Chrome
-            16) wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+            15) wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
                 sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
                 sudo apt-get update
                 sudo apt-get -y install google-chrome-stable
                 ;;
             # g++
-            17) sudo apt-get -y install g++
+            16) sudo apt-get -y install g++
                 ;;
             # Default
             *)  echo "Unrecognized selection number '$1'. Skipping."
