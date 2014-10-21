@@ -123,7 +123,7 @@ echo
 echo -n "Your selection (list the numbers separated by a space) (default=all): "
 read SELECTIONS
 if [ -z "$SELECTIONS" ]; then
-    install_plugin $(seq -s ' ' $NUM_PLUGINS)
+    install_plugin $(seq -s ' ' 0 ${NUM_PLUGINS-1})
 else
     install_plugin $SELECTIONS
 fi
@@ -142,7 +142,7 @@ echo
 echo -n "Your selection (list the numbers separated by a space) (default=all): "
 read SELECTIONS
 if [ -z "$SELECTIONS" ]; then
-    install_colorscheme $(seq -s ' ' $NUM_COLORS)
+    install_colorscheme $(seq -s ' ' 0 ${NUM_COLORS-1})
 else
     install_colorscheme $SELECTIONS
 fi
