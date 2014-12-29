@@ -12,6 +12,7 @@ fi
 # Some useful tools in Homebrew
 brew install bash
 brew install bash-completion
+brew install git
 brew install cmake
 brew install htop-osx
 brew install wget
