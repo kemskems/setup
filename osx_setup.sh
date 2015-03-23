@@ -9,23 +9,59 @@ if [[ -z `which brew` ]]; then
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" && brew update && brew doctor
 fi
 
+echo "Installing macvim..."
+brew install macvim --override-system-vim
+
+# Some useful taps
+brew tap homebrew/science
+brew tap beeftornado/rmtree
+
 # Some useful tools in Homebrew
-brew install bash
-brew install bash-completion
-brew install coreutils
-brew install git
-brew install cmake
-brew install htop-osx
-brew install wget
-brew install macvim
+binaries=(
+    bash
+    bash-completion
+    brew-rmtree
+    cmake
+    coreutils
+    ctags
+    git
+    htop-osx
+    node
+    python
+    r
+    wget
+)
+
+echo "Installing binaries..."
+brew install ${binaries[@]}
 
 # Install Homebrew Cask
 echo "Installing Homebrew Cask..."
 brew install caskroom/cask/brew-cask && brew cask update && brew cask doctor
 
+brew tap caskroom/versions
+
 # Install applications with Homebrew Cask
-brew cask install iterm2
-brew cask install firefox
-brew cask install dropbox
-brew cask install evernote
-brew cask install mendeley-desktop
+apps=(
+    appcleaner
+    caffeine
+    dropbox
+    evernote
+    firefox
+    iterm2
+    libreoffice
+    mactex
+    mendeley-desktop
+    rstudio
+    skype
+    spectacle
+    steam
+    sublime-text
+    telegram
+    texstudio
+    the-unarchiver
+    vlc
+)
+
+echo "Installing apps..."
+brew cask install ${apps[@]}
